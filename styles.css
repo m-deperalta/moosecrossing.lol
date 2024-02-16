@@ -1,0 +1,138 @@
+@font-face {
+    font-family:'CutiveMono-Regular' ;
+    src: url('fonts/CutiveMono-Regular.ttf') format('ttf');
+}
+
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes grainAnimation {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10%, 10%);
+  }
+}
+
+
+body {
+    background-color: transparent;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Set the flex container direction to column */
+    min-height: 100vh; /* Set a minimum height of 100% of the viewport height */
+    width: 100vw;
+    overflow-x: hidden;
+    text-align: center;
+    color: #303030;
+}
+
+
+header {
+    width: auto;
+    height: auto;
+    margin: 40px auto 20px auto; /* Center the header content horizontally */
+    position: relative;
+  
+  /* Styling header content links */
+a {
+    color: #6d0a0f;
+    text-decoration: none;
+    position: relative;
+    transition: border-bottom 0.3s ease; /* Adding a smooth transition for the border-bottom property */
+    margin-bottom: 0;
+  }
+
+  /* Underline effect for links */
+  a::after {
+    content: '';
+    display: block;
+    border-bottom: 1px dashed #6d0a0f; /* Initial underline style */
+    transform: scaleX(0.1); /* Initially set the scale to 0 to hide the underline */
+    transition: transform 0.3s ease; /* Adding a smooth transition for the transform property */
+  }
+
+  /* Hover effect for links */
+  a:hover::after {
+    transform: scaleX(0.2); /* Scale the underline to full width on hover */
+  }
+  p {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s ease;
+  }
+  p:hover {
+    transform: skew(0.7deg, 0.5deg);
+  }
+  .no-cursor-change {
+    cursor: default;
+  }
+}
+
+
+main {
+    flex: 3; 
+    width: auto;
+    height: auto;
+    margin: 20px auto 20px auto;
+    position: relative;
+    line-height: 1.6;
+}
+
+.text-divider {
+    text-align: center;
+    font-size: 12px; 
+    margin: 20px 0; 
+  }
+
+
+/* Styling paragraphs */
+p {
+    margin-bottom: 10px;
+}
+
+/* Styling main content links */
+a {
+    color: #0a6d2b;
+    text-decoration: none;
+    position: relative;
+    transition: border-bottom 0.3s ease; /* Adding a smooth transition for the border-bottom property */
+    margin-bottom: 0;
+  }
+
+  /* Underline effect for links */
+  a::after {
+    content: '';
+    display: block;
+    border-bottom: 1px dotted #0a6d2b; /* Initial underline style */
+    transform: scaleX(20%); /* Initially set the scale to 0 to hide the underline */
+    transition: transform 0.3s ease; /* Adding a smooth transition for the transform property */
+  }
+
+  /* Hover effect for links */
+  a:hover::after {
+    transform: scaleX(50%); /* Scale the underline to full width on hover */
+  }
+
+footer {
+    color: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%; /* Adjust the width as needed */
+    
+}
+
+footer p {
+  opacity: 0.5;
+}
+
+footer {
+  font-size: 10px;
+}
